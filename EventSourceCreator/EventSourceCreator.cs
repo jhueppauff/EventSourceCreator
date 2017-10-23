@@ -11,16 +11,27 @@
 namespace EventSourceCreator
 {
     using System;
-    using System.Windows.Forms;
     using System.Diagnostics;
+    using System.Windows.Forms;
 
+    /// <summary>
+    /// Form Handler, Event Source Creator
+    /// </summary>
     public partial class EventSourceCreator : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EventSourceCreator"/> class.
+        /// </summary>
         public EventSourceCreator()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
+        /// <summary>
+        /// On Load Event
+        /// </summary>
+        /// <param name="sender">object sender</param>
+        /// <param name="e">eventargs e</param>
         private void Form1_Load(object sender, EventArgs e)
         {
             foreach (EventLog eventLog in EventLog.GetEventLogs())
@@ -28,49 +39,76 @@ namespace EventSourceCreator
                 try
                 {
                     string logName = eventLog.LogDisplayName;
-                    cbx_event_log_name.Items.Add(logName);
-                    cbx_rem_eventlogname.Items.Add(logName);
+                    this.cbxEventLogName.Items.Add(logName);
+                    this.cbxRemEventLogName.Items.Add(logName);
                 }
                 catch (System.Security.SecurityException ex)
                 {
                     // Does not have permissions to read log
-                    tbx_status.Text += ex.Message + Environment.NewLine;
+                    this.tbxStatus.Text += ex.Message + Environment.NewLine;
                 }
             }
         }
 
-        private void btn_create_eventsource_Click(object sender, EventArgs e)
+        /// <summary>
+        /// CreateEventSource_Click, Creates the Event Source
+        /// </summary>
+        /// <param name="sender">object sender</param>
+        /// <param name="e">EventArgs e</param>
+        private void Btn_Create_EventSource_Click(object sender, EventArgs e)
         {
             try
             {
-                if (EventLog.SourceExists(tbx_eventsource_name.Text))
+                if (EventLog.SourceExists(this.tbxEventSourceName.Text))
                 {
-                    EventLog.CreateEventSource(tbx_eventsource_name.Text, cbx_event_log_name.SelectedItem.ToString());
+                    EventLog.CreateEventSource(this.tbxEventSourceName.Text, this.cbxEventLogName.SelectedItem.ToString());
                 }
             }
             catch (System.Security.SecurityException ex)
             {
-                tbx_status.Text += ex.Message + Environment.NewLine;
+                this.tbxStatus.Text += ex.Message + Environment.NewLine;
             }
         }
 
-        private void btn_deletesource_Click(object sender, EventArgs e)
+        /// <summary>
+        /// DeleteSource_Click, Delete Event Source
+        /// </summary>
+        /// <param name="sender">object sender</param>
+        /// <param name="e">EventArgs e</param>
+        private void Btn_DeleteSource_Click(object sender, EventArgs e)
         {
             try
             {
-                if (EventLog.SourceExists(tbx_rem_eventsourcename.Text))
+                if (EventLog.SourceExists(this.tbxRemEventSourceName.Text))
                 {
-                    EventLog.DeleteEventSource(tbx_rem_eventsourcename.Text);
+                    EventLog.DeleteEventSource(this.tbxRemEventSourceName.Text);
                 }
                 else
                 {
-                    tbx_status.Text += "Source does not exist" + Environment.NewLine;
+                    this.tbxStatus.Text += "Source does not exist" + Environment.NewLine;
                 }
             }
             catch (System.Security.SecurityException ex)
             {
-                tbx_status.Text += ex.Message + Environment.NewLine;
+                this.tbxStatus.Text += ex.Message + Environment.NewLine;
             }
+        }
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (this.components != null)
+                {
+                    this.components.Dispose();
+                    GC.SuppressFinalize(this);
+                }
+            }
+            base.Dispose(disposing);
         }
     }
 }

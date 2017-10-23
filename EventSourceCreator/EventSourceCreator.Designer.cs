@@ -10,25 +10,80 @@
 
 namespace EventSourceCreator
 {
-    partial class EventSourceCreator
+    /// <summary>
+    /// Event Source Creator Designer
+    /// </summary>
+    public partial class EventSourceCreator
     {
+        /// <summary>
+        /// Button Create EventSource
+        /// </summary>
+        private System.Windows.Forms.Button btnCreateEventSource;
+
+        /// <summary>
+        /// Text Box Event Source Name
+        /// </summary>
+        private System.Windows.Forms.TextBox tbxEventSourceName;
+
+        /// <summary>
+        /// Group Box 1
+        /// </summary>
+        private System.Windows.Forms.GroupBox groupBox1;
+
+        /// <summary>
+        /// Label 2
+        /// </summary>
+        private System.Windows.Forms.Label label2;
+
+        /// <summary>
+        /// Label 1
+        /// </summary>
+        private System.Windows.Forms.Label label1;
+
+        /// <summary>
+        /// ComboBox Event Log Name
+        /// </summary>
+        private System.Windows.Forms.ComboBox cbxEventLogName;
+
+        /// <summary>
+        /// Text Box Status
+        /// </summary>
+        private System.Windows.Forms.TextBox tbxStatus;
+
+        /// <summary>
+        /// Group Box 2
+        /// </summary>
+        private System.Windows.Forms.GroupBox groupBox2;
+
+        /// <summary>
+        /// Button Delete Source
+        /// </summary>
+        private System.Windows.Forms.Button btnDeleteSource;
+
+        /// <summary>
+        /// Combo Box Remove Event Log Name
+        /// </summary>
+        private System.Windows.Forms.ComboBox cbxRemEventLogName;
+
+        /// <summary>
+        /// Label 4
+        /// </summary>
+        private System.Windows.Forms.Label label4;
+
+        /// <summary>
+        /// Label 3
+        /// </summary>
+        private System.Windows.Forms.Label label3;
+
+        /// <summary>
+        /// Text Box Remove Event Source Name
+        /// </summary>
+        private System.Windows.Forms.TextBox tbxRemEventSourceName;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         #region Windows Form Designer generated code
 
@@ -38,47 +93,47 @@ namespace EventSourceCreator
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_create_eventsource = new System.Windows.Forms.Button();
-            this.tbx_eventsource_name = new System.Windows.Forms.TextBox();
+            this.btnCreateEventSource = new System.Windows.Forms.Button();
+            this.tbxEventSourceName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbx_event_log_name = new System.Windows.Forms.ComboBox();
-            this.tbx_status = new System.Windows.Forms.TextBox();
+            this.cbxEventLogName = new System.Windows.Forms.ComboBox();
+            this.tbxStatus = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbxRemEventSourceName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_deletesource = new System.Windows.Forms.Button();
-            this.cbx_rem_eventlogname = new System.Windows.Forms.ComboBox();
-            this.tbx_rem_eventsourcename = new System.Windows.Forms.TextBox();
+            this.btnDeleteSource = new System.Windows.Forms.Button();
+            this.cbxRemEventLogName = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_create_eventsource
+            // btnCreateEventSource
             // 
-            this.btn_create_eventsource.Location = new System.Drawing.Point(301, 114);
-            this.btn_create_eventsource.Name = "btn_create_eventsource";
-            this.btn_create_eventsource.Size = new System.Drawing.Size(123, 30);
-            this.btn_create_eventsource.TabIndex = 0;
-            this.btn_create_eventsource.Text = "Create";
-            this.btn_create_eventsource.UseVisualStyleBackColor = true;
-            this.btn_create_eventsource.Click += new System.EventHandler(this.btn_create_eventsource_Click);
+            this.btnCreateEventSource.Location = new System.Drawing.Point(301, 114);
+            this.btnCreateEventSource.Name = "btnCreateEventSource";
+            this.btnCreateEventSource.Size = new System.Drawing.Size(123, 30);
+            this.btnCreateEventSource.TabIndex = 0;
+            this.btnCreateEventSource.Text = "Create";
+            this.btnCreateEventSource.UseVisualStyleBackColor = true;
+            this.btnCreateEventSource.Click += new System.EventHandler(this.Btn_Create_EventSource_Click);
             // 
-            // tbx_eventsource_name
+            // tbxEventSourceName
             // 
-            this.tbx_eventsource_name.Location = new System.Drawing.Point(6, 54);
-            this.tbx_eventsource_name.Name = "tbx_eventsource_name";
-            this.tbx_eventsource_name.Size = new System.Drawing.Size(404, 26);
-            this.tbx_eventsource_name.TabIndex = 1;
+            this.tbxEventSourceName.Location = new System.Drawing.Point(6, 54);
+            this.tbxEventSourceName.Name = "tbxEventSourceName";
+            this.tbxEventSourceName.Size = new System.Drawing.Size(404, 26);
+            this.tbxEventSourceName.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cbx_event_log_name);
-            this.groupBox1.Controls.Add(this.tbx_eventsource_name);
-            this.groupBox1.Controls.Add(this.btn_create_eventsource);
+            this.groupBox1.Controls.Add(this.cbxEventLogName);
+            this.groupBox1.Controls.Add(this.tbxEventSourceName);
+            this.groupBox1.Controls.Add(this.btnCreateEventSource);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(453, 172);
@@ -104,36 +159,43 @@ namespace EventSourceCreator
             this.label1.TabIndex = 4;
             this.label1.Text = "Event Source Name:";
             // 
-            // cbx_event_log_name
+            // cbxEventLogName
             // 
-            this.cbx_event_log_name.FormattingEnabled = true;
-            this.cbx_event_log_name.Location = new System.Drawing.Point(6, 114);
-            this.cbx_event_log_name.Name = "cbx_event_log_name";
-            this.cbx_event_log_name.Size = new System.Drawing.Size(275, 28);
-            this.cbx_event_log_name.TabIndex = 3;
+            this.cbxEventLogName.FormattingEnabled = true;
+            this.cbxEventLogName.Location = new System.Drawing.Point(6, 114);
+            this.cbxEventLogName.Name = "cbxEventLogName";
+            this.cbxEventLogName.Size = new System.Drawing.Size(275, 28);
+            this.cbxEventLogName.TabIndex = 3;
             // 
-            // tbx_status
+            // tbxStatus
             // 
-            this.tbx_status.Location = new System.Drawing.Point(12, 213);
-            this.tbx_status.Multiline = true;
-            this.tbx_status.Name = "tbx_status";
-            this.tbx_status.ReadOnly = true;
-            this.tbx_status.Size = new System.Drawing.Size(958, 214);
-            this.tbx_status.TabIndex = 3;
+            this.tbxStatus.Location = new System.Drawing.Point(12, 213);
+            this.tbxStatus.Multiline = true;
+            this.tbxStatus.Name = "tbxStatus";
+            this.tbxStatus.ReadOnly = true;
+            this.tbxStatus.Size = new System.Drawing.Size(958, 214);
+            this.tbxStatus.TabIndex = 3;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.tbx_rem_eventsourcename);
+            this.groupBox2.Controls.Add(this.tbxRemEventSourceName);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.btn_deletesource);
-            this.groupBox2.Controls.Add(this.cbx_rem_eventlogname);
+            this.groupBox2.Controls.Add(this.btnDeleteSource);
+            this.groupBox2.Controls.Add(this.cbxRemEventLogName);
             this.groupBox2.Location = new System.Drawing.Point(471, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(499, 172);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Remove Event Source";
+            // 
+            // tbxRemEventSourceName
+            // 
+            this.tbxRemEventSourceName.Location = new System.Drawing.Point(10, 118);
+            this.tbxRemEventSourceName.Name = "tbxRemEventSourceName";
+            this.tbxRemEventSourceName.Size = new System.Drawing.Size(396, 26);
+            this.tbxRemEventSourceName.TabIndex = 5;
             // 
             // label4
             // 
@@ -153,30 +215,23 @@ namespace EventSourceCreator
             this.label3.TabIndex = 3;
             this.label3.Text = "Event Log Name";
             // 
-            // btn_deletesource
+            // btnDeleteSource
             // 
-            this.btn_deletesource.Location = new System.Drawing.Point(412, 115);
-            this.btn_deletesource.Name = "btn_deletesource";
-            this.btn_deletesource.Size = new System.Drawing.Size(75, 30);
-            this.btn_deletesource.TabIndex = 2;
-            this.btn_deletesource.Text = "Delete";
-            this.btn_deletesource.UseVisualStyleBackColor = true;
-            this.btn_deletesource.Click += new System.EventHandler(this.btn_deletesource_Click);
+            this.btnDeleteSource.Location = new System.Drawing.Point(412, 115);
+            this.btnDeleteSource.Name = "btnDeleteSource";
+            this.btnDeleteSource.Size = new System.Drawing.Size(75, 30);
+            this.btnDeleteSource.TabIndex = 2;
+            this.btnDeleteSource.Text = "Delete";
+            this.btnDeleteSource.UseVisualStyleBackColor = true;
+            this.btnDeleteSource.Click += new System.EventHandler(this.Btn_DeleteSource_Click);
             // 
-            // cbx_rem_eventlogname
+            // cbxRemEventLogName
             // 
-            this.cbx_rem_eventlogname.FormattingEnabled = true;
-            this.cbx_rem_eventlogname.Location = new System.Drawing.Point(10, 52);
-            this.cbx_rem_eventlogname.Name = "cbx_rem_eventlogname";
-            this.cbx_rem_eventlogname.Size = new System.Drawing.Size(483, 28);
-            this.cbx_rem_eventlogname.TabIndex = 0;
-            // 
-            // tbx_rem_eventsourcename
-            // 
-            this.tbx_rem_eventsourcename.Location = new System.Drawing.Point(10, 118);
-            this.tbx_rem_eventsourcename.Name = "tbx_rem_eventsourcename";
-            this.tbx_rem_eventsourcename.Size = new System.Drawing.Size(396, 26);
-            this.tbx_rem_eventsourcename.TabIndex = 5;
+            this.cbxRemEventLogName.FormattingEnabled = true;
+            this.cbxRemEventLogName.Location = new System.Drawing.Point(10, 52);
+            this.cbxRemEventLogName.Name = "cbxRemEventLogName";
+            this.cbxRemEventLogName.Size = new System.Drawing.Size(483, 28);
+            this.cbxRemEventLogName.TabIndex = 0;
             // 
             // EventSourceCreator
             // 
@@ -184,7 +239,7 @@ namespace EventSourceCreator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 439);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.tbx_status);
+            this.Controls.Add(this.tbxStatus);
             this.Controls.Add(this.groupBox1);
             this.Name = "EventSourceCreator";
             this.Text = "Event Source Creator";
@@ -197,22 +252,6 @@ namespace EventSourceCreator
             this.PerformLayout();
 
         }
-
         #endregion
-
-        private System.Windows.Forms.Button btn_create_eventsource;
-        private System.Windows.Forms.TextBox tbx_eventsource_name;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbx_event_log_name;
-        private System.Windows.Forms.TextBox tbx_status;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btn_deletesource;
-        private System.Windows.Forms.ComboBox cbx_rem_eventlogname;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbx_rem_eventsourcename;
     }
 }
-
