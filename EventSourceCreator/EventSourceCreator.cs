@@ -28,6 +28,24 @@ namespace EventSourceCreator
         }
 
         /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (this.components != null)
+                {
+                    this.components.Dispose();
+                    GC.SuppressFinalize(this);
+                }
+            }
+
+            base.Dispose(disposing);
+        }
+
+        /// <summary>
         /// On Load Event
         /// </summary>
         /// <param name="sender">object sender</param>
@@ -92,23 +110,6 @@ namespace EventSourceCreator
             {
                 this.tbxStatus.Text += ex.Message + Environment.NewLine;
             }
-        }
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                if (this.components != null)
-                {
-                    this.components.Dispose();
-                    GC.SuppressFinalize(this);
-                }
-            }
-            base.Dispose(disposing);
         }
     }
 }
