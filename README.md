@@ -7,3 +7,5 @@ Code was written in .NET 4.6.2
 
 ## Usage 
 Just extract and run the EventSourceCreator.exe
+
+![Screenshot of the Main Form](Media/MainForm.PNG "MainForm")
