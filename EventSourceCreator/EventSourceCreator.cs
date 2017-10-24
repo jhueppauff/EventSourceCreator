@@ -77,7 +77,7 @@ namespace EventSourceCreator
         {
             try
             {
-                if (EventLog.SourceExists(this.tbxEventSourceName.Text))
+                if (!EventLog.SourceExists(this.tbxEventSourceName.Text))
                 {
                     EventLog.CreateEventSource(this.tbxEventSourceName.Text, this.cbxEventLogName.SelectedItem.ToString());
                     tbxStatus.Text += $"Created Source {this.tbxEventSourceName.Text} successfully";
