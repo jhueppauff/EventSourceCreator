@@ -80,7 +80,7 @@ namespace EventSourceCreator
                 if (!EventLog.SourceExists(this.tbxEventSourceName.Text))
                 {
                     EventLog.CreateEventSource(this.tbxEventSourceName.Text, this.cbxEventLogName.SelectedItem.ToString());
-                    tbxStatus.Text += $"Created Source {this.tbxEventSourceName.Text} successfully";
+                    tbxStatus.Text += $"Created Source {this.tbxEventSourceName.Text} successfully\n";
                 }
             }
             catch (System.Security.SecurityException ex)
@@ -101,7 +101,7 @@ namespace EventSourceCreator
                 if (EventLog.SourceExists(this.tbxRemEventSourceName.Text))
                 {
                     EventLog.DeleteEventSource(this.tbxRemEventSourceName.Text);
-                    tbxStatus.Text += $"Deleted Source {this.tbxRemEventSourceName.Text} successfully";
+                    tbxStatus.Text += $"Deleted Source {this.tbxRemEventSourceName.Text} successfully\n";
                 }
                 else
                 {
